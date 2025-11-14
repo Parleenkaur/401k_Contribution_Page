@@ -10,24 +10,31 @@ See projected retirement savings based on current settings
 Save contribution preferences
 
 Setup Instructions
-Prerequisites
 
 Node.js (v12 or higher)
-The application will run on http://localhost:3000
-Tech Stack
+: The application will run on http://localhost:3000
+
+Tech Stack:
 
 Frontend: React
+
 Backend: Node.js, Express
+
 Data Storage: JSON file
 
 Project Structure
 401k-contribution-app/
+
 ├── backend/               # Node.js server
+
 ├── frontend/              # React application
+
 Future Enhancements
 
 User authentication
+
 Enhanced retirement projections with adjustable variables
+
 Contribution history tracking
 
 This project was created by Parleen Kaur for Human Interest's technical assignment.
