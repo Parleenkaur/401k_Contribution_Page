@@ -8,6 +8,7 @@ import RetirementOverview from './components/RetirementOverview';
 import './App.css';
 
 function App() {
+  const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001';
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -24,7 +25,7 @@ function App() {
   const fetchUserData = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:3001/api/user-data');
+      const response = await fetch(`${API_BASE_URL}/api/user-data`);
       const data = await response.json();
       setUserData(data);
       setContributionType(data.contributionType);
@@ -41,7 +42,7 @@ function App() {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:3001/api/update-contribution', {
+      const response = await fetch(`${API_BASE_URL}/api/update-contribution`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
